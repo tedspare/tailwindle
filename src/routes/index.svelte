@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-	<h1>
+	<h1 class="text-blue-600 font-extrabold">
 		Welcome to Tailwindle
 	</h1>
 
