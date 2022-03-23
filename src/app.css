@@ -31,11 +31,11 @@ p {
 }
 
 a {
-  @apply text-blue-600 hover:underline decoration-dashed;
+  @apply text-blue-400 hover:underline decoration-dashed;
 }
 
 h1 {
-  @apply text-3xl text-center md:text-4xl;
+  @apply text-3xl md:text-4xl font-semibold text-center pb-8;
 }
 
 h2 {
@@ -54,5 +54,5 @@ pre {
 }
 
 button {
-  @apply focus:outline-none;
+  @apply focus:outline-none p-2 rounded-md;
 }
