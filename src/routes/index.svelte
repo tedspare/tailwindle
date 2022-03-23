@@ -10,28 +10,14 @@
 	<title>Home</title>
 </svelte:head>
 
-<section>
-	<h1 class="text-blue-600 font-extrabold">
+<section class="flex flex-col justify-center items-center flex-1">
+	<h1 class="text-blue-400 font-extrabold w-full">
 		Welcome to Tailwindle
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
+		Try editing <strong>src/routes/index.svelte</strong>
 	</h2>
 
 	<Counter />
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-</style>
