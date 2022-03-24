@@ -1,12 +1,30 @@
 package handler
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
-	"time"
+	"os"
+
+	"github.com/nedpals/supabase-go"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-    currentTime := time.Now().Format(time.RFC850)
-    fmt.Fprintf(w, currentTime)
+  supabaseUrl := os.Getenv("SUPABASE_URL")
+  supabaseKey := os.Getenv("SUPABASE_KEY")
+  supabaseClient := supabase.CreateClient(supabaseUrl, supabaseKey)
+
+  // Pull today's row from Supabase DB
+  var results map[string]interface{}
+  err := supabaseClient.DB.From("classes").Select("*").Single().Execute(&results)
+  
+	if err != nil {
+    panic(err)
+  }
+
+	// Convert results to JSON
+	jsonResults, _ := json.Marshal(results)
+
+	w.Header().Add("Content-Type", "application/json")
+  fmt.Fprintf(w, string(jsonResults))
 }
