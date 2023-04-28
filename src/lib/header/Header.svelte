@@ -1,6 +1,13 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+	let isDarkMode = true;
+	
+	function toggleTheme() {
+		isDarkMode = !isDarkMode;
+		document.body.classList.toggle('light-mode', !isDarkMode);
+		document.body.classList.toggle('dark-mode', isDarkMode);
+	}
 </script>
 
 <header>
@@ -29,7 +36,8 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<!-- Theme toggle button -->
+		<button on:click={toggleTheme}>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</button>
 	</div>
 </header>
 
