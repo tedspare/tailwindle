@@ -29,7 +29,7 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<a href="https://github.com/TedSpare"><img src="https://github.githubassets.com/pinned-octocat.svg" alt="Ted Spare's GitHub" width="32" height="32" /></a>
 	</div>
 </header>
 
