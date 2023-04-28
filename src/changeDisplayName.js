@@ -1,0 +1,1 @@
+function changeDisplayName(newName) { console.log(`Display name changed to: ${newName}`); } changeDisplayName('Nashi');
