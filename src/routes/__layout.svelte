@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p>© 2023 <a href="https://github.com/TedSpare">Ted Spare</a></p>
 </footer>
 
 <style>
@@ -31,6 +31,10 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background-color: var(--background);
 	}
 
 	footer a {
