@@ -19,6 +19,14 @@ body {
   @apply bg-gray-900 min-h-screen m-0;
 }
 
+body.light-mode {
+  @apply bg-white text-black;
+}
+
+body.dark-mode {
+  @apply bg-gray-900 text-gray-100;
+}
+
 #svelte {
   min-height: 100vh;
   @apply min-h-screen flex flex-col;
